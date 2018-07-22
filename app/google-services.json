@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "334910710486",
+    "firebase_url": "https://zadi-4a385.firebaseio.com",
+    "project_id": "zadi-4a385",
+    "storage_bucket": "zadi-4a385.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334910710486:android:6ed46b3ea40eadde",
+        "android_client_info": {
+          "package_name": "com.zadi.zadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334910710486-u2pekhe57em5mshgfe4urtvlf58ee468.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRDMkMhKme2HdDKKL1CPgvlN-MUaIU560"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

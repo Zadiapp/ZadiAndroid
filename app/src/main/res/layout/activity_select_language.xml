@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/location_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/select_language"
+        android:textColor="@color/outer_space"
+        android:textSize="29sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/location_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_title"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="@string/select_language_msg"
+        android:textColor="@color/battleship_grey"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/allow_location_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_msg"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/ic_step_lang" />
+
+    <Button
+        android:id="@+id/english_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/allow_location_iv"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/rounded_gray_border"
+        android:drawablePadding="@dimen/_15sdp"
+        android:drawableStart="@drawable/ic_lang_en"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_3sdp"
+        android:paddingEnd="@dimen/_80sdp"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:text="@string/english"
+        android:textAllCaps="false"
+        android:textColor="@color/outer_space"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/arabic_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/english_btn"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rounded_gray_border"
+        android:drawableEnd="@drawable/ic_lang_ar"
+        android:drawablePadding="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:paddingStart="@dimen/_80sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:text="@string/arabic"
+        android:textAllCaps="false"
+        android:textColor="@color/outer_space"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
