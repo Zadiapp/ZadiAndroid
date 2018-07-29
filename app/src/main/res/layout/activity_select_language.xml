@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context=".MainActivity">
-
+    android:background="@android:color/white">
 
     <TextView
         android:id="@+id/location_title"
@@ -42,18 +40,17 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:src="@drawable/ic_step_lang" />
 
-    <Button
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
         android:id="@+id/english_btn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/allow_location_iv"
         android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/rounded_gray_border"
         android:drawablePadding="@dimen/_15sdp"
         android:drawableStart="@drawable/ic_lang_en"
-        android:gravity="center"
         android:paddingBottom="@dimen/_3sdp"
         android:paddingEnd="@dimen/_80sdp"
         android:paddingStart="@dimen/_5sdp"
@@ -62,9 +59,10 @@
         android:textAllCaps="false"
         android:textColor="@color/outer_space"
         android:textSize="17sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:spinning_bar_width="0dp" />
 
-    <Button
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
         android:id="@+id/arabic_btn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
@@ -83,6 +81,7 @@
         android:textAllCaps="false"
         android:textColor="@color/outer_space"
         android:textSize="17sp"
-        android:textStyle="bold" />
-
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:spinning_bar_width="0dp" />
 </RelativeLayout>

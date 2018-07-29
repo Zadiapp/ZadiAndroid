@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#fff</color>
-    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorPrimaryDark">#ff6f9301</color>
     <color name="colorAccent">#fff</color>
     <color name="outer_space">#ff4a4a4a</color>
     <color name="battleship_grey">#ff848484</color>
     <color name="dark_tangerine">#ffffa809</color>
     <color name="light_gray">#ffd3d3d3</color>
+    <color name="yellow_green">#ff97bd2f</color>
+
 </resources>
