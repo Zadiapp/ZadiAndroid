@@ -18,14 +18,18 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <service android:name=".firebaseService.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".GPS.GPSTracker" />
+        <service android:name=".GPS.GPSTracker">
+            <intent-filter android:label="service">
+                <action android:name="GPS.GPSTracker" />
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="io.fabric.ApiKey"
@@ -53,7 +57,8 @@
         <activity
             android:name=".mapViews.MapsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".home.HomeActivity"></activity>
+        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".MarketDetails.MarketActivity"></activity>
     </application>
 
 </manifest>

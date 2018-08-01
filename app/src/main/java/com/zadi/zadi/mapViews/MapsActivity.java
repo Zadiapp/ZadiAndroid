@@ -101,8 +101,9 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Re
         registerGuestBody.setToken(FirebaseInstanceId.getInstance().getToken());
         registerGuestBody.setLatitude(mMap.getCameraPosition().target.latitude);
         registerGuestBody.setLongitude(mMap.getCameraPosition().target.longitude);
+        PrefsManager.getInstance().setLongtuide(String.valueOf(mMap.getCameraPosition().target.longitude));
+        PrefsManager.getInstance().setLat(String.valueOf(mMap.getCameraPosition().target.latitude));
         registerGuestPresenter.registerGuestUser(registerGuestBody);
-
     }
 
     @Override
@@ -114,6 +115,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Re
     @Override
     public void onSuccess(RegisterGuestResponse registerGuestResponse) {
         confirmBtn.revertAnimation();
+        PrefsManager.getInstance().setToken(registerGuestResponse.getData());
         PrefsManager.getInstance().setIsHasLocation(true);
         HomeActivity.start(this);
     }

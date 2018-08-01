@@ -56,6 +56,50 @@ public class PrefsManager {
         }
     }
 
+    public void setLongtuide(String lng) {
+        addString("LONG", lng);
+    }
+
+    public double getLongtuide() {
+        return Double.parseDouble(getString("LONG","0"));
+    }
+
+
+    public void setLat(String lng) {
+        addString("lat", lng);
+    }
+
+    public double getLat() {
+        return Double.parseDouble(getString("lat","0"));
+    }
+
+    public void setToken(String token) {
+        addString("Token", "Bearer" + token);
+    }
+
+    public String getToken() {
+        return getString("Token", null);
+    }
+
+    private long getLong(String key) {
+        return this.preferences.getLong(key, 0);
+    }
+
+
+    void putDouble(final String key, final double value) {
+        addLong(key, Double.doubleToRawLongBits(value));
+    }
+
+    double getDouble(final String key) {
+        return Double.longBitsToDouble(getLong(key));
+    }
+
+    private void addLong(String key, long val) {
+        if (this.preferences != null && !TextUtils.isEmpty(key)) {
+            this.preferences.edit().putFloat(key, val).apply();
+        }
+    }
+
     private String getString(String key, String defaultVal) {
         if (this.preferences == null || TextUtils.isEmpty(key)) {
             return defaultVal;

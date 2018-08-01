@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.HomeActivity">
+    android:outlineProvider="bounds">
 
-    <TextView
-        android:id="@+id/lang"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/_20sdp"
-        android:text="ssss"
-        />
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp" />
+
+            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_4sdp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+
+        <!--<View-->
+            <!--android:id="@+id/shadow"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:alpha="0.7"-->
+            <!--android:visibility="gone"-->
+            <!--android:background="@android:color/black" />-->
+    </FrameLayout>
+
+    <!--<include layout="@layout/market_details_bottom" />-->
+</android.support.design.widget.CoordinatorLayout>
